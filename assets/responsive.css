@@ -1,0 +1,9 @@
+@media only screen and (max-width: 572px) {
+    #sidebar{
+        width: 0;
+        padding: 0;
+    }
+    #main-page{
+        margin-left: 0;
+    }
+}

@@ -9,26 +9,33 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-ul{
-    list-style: none;
-}
+
+
 body{
     font-family: 'Nunito', sans-serif;
 }
+ul{
+    list-style: none;
+}
+
 #sidebar{
     height: 100%;
     width: 250px;
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
     background-color: #f2f3f7;
     overflow-x: hidden;
+    transition: 0.5s;
+    overflow-x: hidden;
     padding: 20px;
+    transition: 0.5s;
 }
+
 #main-page{
     margin-left: 250px;
     padding: 25px;
+    transition: 0.5s;
 }
 .sec-header{
     font-size: 20px;
@@ -50,7 +57,7 @@ body{
     transition: width .3s;
 }
 #profile-pic-wrapper{
-    background-image: url('https://dummyimage.com/400x400/000/fff&text=ee');
+    background-image: url('../images/profile-pic2.png');
     width: 130px;
     height: 130px;
     margin: 0 auto;
@@ -96,8 +103,6 @@ body{
     border-bottom: 2px solid #2c98f0;
 }
 
-
-}
 .timeline-centered {
     position: relative;
     margin-bottom: 30px;
@@ -212,7 +217,10 @@ body{
     border-radius: 0;
 }
 
-.services {
+.skills-row{
+    margin-top: 50px;
+}
+.skills {
     margin-bottom: 30px;
     padding: 1.5em;
     -webkit-box-shadow: 0 0 56px -8px rgba(0,0,0,.17);
@@ -222,12 +230,16 @@ body{
     box-shadow: 0 0 56px -8px rgba(0,0,0,.17);
     border-bottom: 2px solid #2c98f0;
 }
-.services {
+.skills {
     margin-bottom: 80px;
     position: relative;
+    display: block;
     z-index: 0;
 }
-.services .icon {
+.skills.color-2 {
+    border-bottom: 2px solid #ec5453;
+}
+.skills .icon {
     position: absolute;
     top: -20px;
     text-align: center;
@@ -239,13 +251,28 @@ body{
     margin: 0 auto;
     background: #2c98f0;
 }
-.services .icon:before, .services .icon:after {
+.skills.color-2 .icon {
+    background: #ec5453;
+}
+.skills.color-3 .icon {
+    background: #f9bf3f;
+}
+.skills.color-4 .icon {
+    background: #a84cb8;
+}
+.skills.color-5 .icon {
+    background: #2fa499;
+}
+.skills.color-6 .icon {
+    background: #4054b2;
+}
+.skills .icon:before, .skills .icon:after {
     position: absolute;
     left: 0;
     right: 0;
     content: '';
 }
-.services .icon:before {
+.skills .icon:before {
     top: -30px;
     width: 0;
     height: 0;
@@ -253,14 +280,14 @@ body{
     border-width: 0 50px 30px;
     border-color: transparent transparent #2c98f0 transparent;
 }
-.services .icon i {
+.skills .icon i {
     font-size: 30px;
     color: #fff;
     z-index: 1;
     display: table-cell;
     vertical-align: middle;
 }
-.services .icon:after {
+.skills .icon:after {
     bottom: -30px;
     width: 0;
     height: 0;
@@ -268,7 +295,102 @@ body{
     border-width: 30px 50px 0;
     border-color: #2c98f0 transparent transparent transparent;
 }
-.services .desc {
-    margin-top: 60px;
+.skills.color-2 .icon:before {
+    border-color: transparent transparent #ec5453 transparent;
+}
+.skills.color-2 .icon:after {
+    border-color: #ec5453 transparent transparent transparent;
+}
+.skills.color-3 .icon:before {
+    border-color: transparent transparent #f9bf3f transparent;
+}
+.skills.color-3 .icon:after {
+    border-color: #f9bf3f transparent transparent transparent;
+}
+.skills.color-4 .icon:before {
+    border-color: transparent transparent #a84cb8 transparent;
+}
+.skills.color-4 .icon:after {
+    border-color: #a84cb8 transparent transparent transparent;
+}
+.skills.color-5 .icon:before {
+    border-color: transparent transparent #2fa499 transparent;
+}
+.skills.color-5 .icon:after {
+    border-color: #2fa499 transparent transparent transparent;
+}
+.skills.color-6 .icon:before {
+    border-color: transparent transparent #4054b2 transparent;
+}
+.skills.color-6 .icon:after {
+    border-color: #4054b2 transparent transparent transparent;
 }
 
+
+
+
+
+.skills .desc {
+    margin-top: 50px;
+    font-size: 14px;
+}
+.skills .desc h3{
+    font-size: 16px;
+    font-weight: bold;
+}
+.progress-wrap h3 {
+    font-size: 14px;
+    font-family: "Quicksand", Arial, sans-serif;
+    margin-bottom: 10px;
+}
+.progress {
+    height: 6px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #f2f3f7;
+    overflow: visible;
+}
+.progress-bar.color-1 {
+    background: #2c98f0;
+}
+
+.progress-bar {
+    background: #2c98f0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #000;
+    font-weight: 600;
+    text-align: right;
+    position: relative;
+    overflow: visible;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    border-radius: 8px;
+}
+.progress-bar span {
+    position: absolute;
+    top: -22px;
+    right: 0;
+}
+.progress-bar.color-1 span {
+    color: #2c98f0;
+}
+.progress-bar:after {
+    position: absolute;
+    top: -2px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    content: '';
+    background: #2c98f0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+.progress-bar.color-1:after {
+    background: #2c98f0;
+}
