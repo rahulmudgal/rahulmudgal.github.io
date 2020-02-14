@@ -6,4 +6,7 @@
     #main-page{
         margin-left: 0;
     }
+    #mobile-nav{
+        display: block;
+    }
 }
