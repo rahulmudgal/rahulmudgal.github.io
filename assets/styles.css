@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -15,12 +15,28 @@ html {
 
 
 body{
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Ubuntu Condensed', sans-serif;
     text-align: justify;
 }
 ul{
     list-style: none;
 }
+*::-moz-selection{
+    background: #4054b2;
+    color: #fff;
+}
+*::selection{
+    background: #4054b2;
+    color: #fff;
+}
+p::-moz-selection { 
+    background-color: #f1c40f;
+    color:initial;
+}
+p::selection { 
+    background-color: #f1c40f;
+    color: initial;
+ }
 
 #sidebar{
     height: 100%;
