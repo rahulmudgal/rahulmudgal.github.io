@@ -36,7 +36,15 @@ p::-moz-selection {
 p::selection { 
     background-color: #f1c40f;
     color: initial;
- }
+}
+
+.parallax{
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 200px;
+}
 
 #sidebar{
     height: 100%;
@@ -486,14 +494,22 @@ p::selection {
     background: #2c98f0;
 }
 
-#contact .contact-box{
-    padding: 0 20px;
-    border: 1px solid #d8d8d8;
-    margin-bottom: 8px;
-    line-height: 36px;
+#contact .skills{
+    min-height: auto;
 }
-#contact .contact-box i{
-    height: 100%;
-    margin-right: 20px;
-    font-size: 36px;
+#contact .skills .icon{
+    width: 50px;
+    height: 25px;
+}
+#contact .skills .icon i {
+    font-size: 18px;
+}
+
+#contact .skills .icon:before {
+    top: -15px;
+    border-width: 0 25px 15px;
+}
+#contact .skills .icon:after {
+    bottom: -15px;
+    border-width: 15px 25px 0;
 }
