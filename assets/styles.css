@@ -74,6 +74,15 @@ p::selection {
     border-bottom: 1px solid #555;
     padding-right: 5px;
     padding-top: 10px;
+    
+}
+@keyframes borderbottomAnim {
+    from {border-bottom-style: solid;}
+    to {border-bottom-style: dashed;}
+}
+#nav-ul li:hover {
+    border-bottom-style: dashed;
+    animation: borderbottomAim .2s infinite;
 }
 #nav-ul li a{
     color: #2c98f0;
