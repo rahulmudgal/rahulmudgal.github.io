@@ -25,10 +25,15 @@ $(document).ready(function () {
 
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
-            .then((reg) => {
-                console.log('Service worker registered.', reg);
-            });
+        navigator.serviceWorker
+            .register('serviceWorker.js')
+            .then(registration => {
+                registration.addEventListener('updatefound', () =>
+                    console.log('A new service worker is available')
+                )
+                console.log('Registration successful')
+            })
+            .catch(err => console.log('Registration unsuccessful ', err))
     });
 }
 
