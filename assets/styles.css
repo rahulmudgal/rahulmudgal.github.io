@@ -350,6 +350,19 @@ p::selection {
 .skills.color-2 {
     border-bottom: 2px solid #ec5453;
 }
+.skills.color-3 {
+    border-bottom: 2px solid #f9bf3f;
+}
+.skills.color-4 {
+    border-bottom: 2px solid #a84cb8;
+}
+.skills.color-5 {
+    border-bottom: 2px solid #2fa499;
+}
+.skills.color-6 {
+    border-bottom: 2px solid #4054b2;
+}
+
 .skills .icon {
     position: absolute;
     top: -20px;

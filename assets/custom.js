@@ -48,3 +48,21 @@ $('span.counter').each(function () {
         }
     });
 });
+
+
+/*work ex cal*/
+
+var calWorkEx = () => {
+    var startDay = new Date('2018-06-20').getTime();
+    var currDay = new Date().getTime();
+    totalWorkEx = Math.floor(currDay - startDay);
+    var day = 1000 * 60 * 60 * 24;
+
+    var years = Math.floor(totalWorkEx / (day * 365));
+    var months = Math.floor((totalWorkEx % (day * 365)) / (day * 31));
+    var days = Math.floor((totalWorkEx % day * 31) / day);
+
+    workexString = `${years} ${years > 1 ? 'years' : 'year'} ${months}${months > 1 ? 'months' : 'month'} ${days} ${days > 1 ? 'days' : 'day'} `;
+    document.getElementById('workex').innerText = workexString;
+}
+calWorkEx();
