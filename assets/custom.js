@@ -1,41 +1,30 @@
 $(document).ready(function () {
-    // Add smooth scrolling to all links
     $("a").on('click', function (event) {
-
-        // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
-            // Prevent default anchor click behavior
             event.preventDefault();
-
-            // Store hash
             var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
             }, 0, function () {
-
-                // Add hash (#) to URL when done scrolling (default click behavior)
                 window.location.hash = hash;
             });
-        } // End if
+        }
     });
+    var per = 15;
+    var runner = setInterval(progress, 100);
+    function progress(){
+        if(per === 80){
+            clearInterval(runner);
+            $("#profile-loader").css("background-color","red");
+        }else{
+            per++;
+            console.log(per);
+            $("#profile-loader").css("width",per+'%');
+            $("#profile-loader").text("Loading profile..." + per + "%");
+            $("#profile-loader").attr("aria-valuenow",per);
+        }
+    }
 });
-
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker
-            .register('serviceWorker.js')
-            .then(registration => {
-                registration.addEventListener('updatefound', () =>
-                    console.log('A new service worker is available')
-                )
-                console.log('Registration successful')
-            })
-            .catch(err => console.log('Registration unsuccessful ', err))
-    });
-}
 
 /* Counter Code */
 $('span.counter').each(function () {
@@ -62,7 +51,7 @@ var calWorkEx = () => {
     var months = Math.floor((totalWorkEx % (day * 365)) / (day * 31));
     var days = Math.floor((totalWorkEx % day * 31) / day);
 
-    workexString = `${years} ${years > 1 ? 'years' : 'year'} ${months}${months > 1 ? 'months' : 'month'} ${days} ${days > 1 ? 'days' : 'day'} `;
+    workexString = `${years} ${years > 1 ? 'years' : 'year'} ${months} ${months > 1 ? 'months' : 'month'}`;
     document.getElementById('workex').innerText = workexString;
 }
 calWorkEx();
