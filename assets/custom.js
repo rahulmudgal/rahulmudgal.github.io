@@ -10,20 +10,6 @@ $(document).ready(function () {
             });
         }
     });
-    var per = 15;
-    var runner = setInterval(progress, 100);
-    function progress(){
-        if(per === 80){
-            clearInterval(runner);
-            $("#profile-loader").css("background-color","red");
-        }else{
-            per++;
-            console.log(per);
-            $("#profile-loader").css("width",per+'%');
-            $("#profile-loader").text("Loading profile..." + per + "%");
-            $("#profile-loader").attr("aria-valuenow",per);
-        }
-    }
 });
 
 /* Counter Code */
