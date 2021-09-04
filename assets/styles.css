@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -6,7 +6,6 @@ html {
 * {
   padding: 0;
   margin: 0;
-  color: #0f0;
 }
 *:before,
 *:after {
@@ -16,10 +15,12 @@ html {
 }
 
 body {
-  font-family: Monospace;
+  font-family: 'Josefin Sans', sans-serif;
   text-align: justify;
   background-color: #222;
+  font-size: 16px;
 }
+
 ul {
   list-style: none;
 }
@@ -55,32 +56,19 @@ ul {
 
 .bg-black {
   background-color: #000;
+  color: #fff;
   padding: 15px;
 }
 a {
-  color: #7d8cff;
+  color: #fff;
 }
 a:hover {
   color: #0ef;
   text-decoration: none;
 }
-nav ul li {
-  display: inline-block;
-  margin-left: 15px;
-}
-#workex {
-  color: #7d8cff;
-}
 
-.br1 {
-  border-width: 3px;
-  border-style: solid;
-  border-image: 
-    linear-gradient(
-      to bottom, 
-      #7d8cff, 
-      rgba(0, 0, 0, 0)
-    ) 1 100%;
+.imp {
+  color: #7d8cff;
 }
 
 .btn-main {
@@ -91,5 +79,24 @@ nav ul li {
   line-height: 1.5;
 }
 .fa {
-  color: #000;
+  font-size: 0.9rem;
+}
+
+
+#key-data tr td:first-child {
+  text-align: right;
+  padding-right: 5px;
+  line-height: 2;
+}
+#key-data tr td:nth-child(2) {
+  color:#9c9c9c;
+}
+
+.skill-tags span{
+  padding:4px;
+  line-height: 2;
+  border-radius: 4px;
+  color: black;
+  background-color: #d8d8d8;
+  white-space: nowrap;
 }
